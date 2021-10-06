@@ -23,38 +23,26 @@ namespace CuadrosTexto
         public MainWindow()
         {
             InitializeComponent();
+            NombreUsuarioTextBox.Tag = AyudaNombreTextBlock;
+            ApellidoUsuarioTextBox.Tag = AyudaApellidoTextBlock;
         }
 
         private void SacarAyuda_KeyUp(object sender, KeyEventArgs e)
         {
             TextBox objeto = (TextBox)sender;
+            TextBlock mensaje = (TextBlock)objeto.Tag;
             if (e.Key == Key.F1)
             {
-                switch(objeto.Tag.ToString())
-                {
-                    case "nombreUsuario":
-                        AyudaNombreTextBlock.Text = AyudaNombreTextBlock.Text.Length > 1 ? "" : "Nombre del usuario";
-                        break;
-                    case "apellidoUsuario":
-                        AyudaApellidoTextBlock.Text = AyudaApellidoTextBlock.Text.Length> 1 ? "": "Apellido del usuario";
-                        break;
-                }
+                mensaje.Visibility = mensaje.Visibility == Visibility ? Visibility.Hidden : Visibility.Visible;
+
             }
         }    
         private void EdadUsuarioTextBox_KeyUp(object sender, KeyEventArgs e)
         {
+            AyudaEdadTextBox.Foreground = Brushes.Red;
             if (e.Key == Key.F2)
             {
-                try
-                {
-                    int.Parse(EdadUsuarioTextBox.Text);
-                    AyudaEdadTextBox.Text = "";
-                }
-                catch
-                {
-                    AyudaEdadTextBox.Text = "Edad Incorrecta";
-                    AyudaEdadTextBox.Foreground = Brushes.Red;
-                }
+                AyudaEdadTextBox.Text = int.TryParse(EdadUsuarioTextBox.Text, out _) ? "" : "Edad Incorrecta";
             }
         }
     }

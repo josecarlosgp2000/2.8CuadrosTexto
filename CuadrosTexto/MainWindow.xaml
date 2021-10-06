@@ -14,8 +14,8 @@
         <TextBox x:Name="ApellidoUsuarioTextBox" Tag="apellidoUsuario" HorizontalAlignment="Left" Height="23" Margin="69,195,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="190" KeyUp="SacarAyuda_KeyUp"/>
         <TextBlock HorizontalAlignment="Left" Margin="69,260,0,0" TextWrapping="Wrap" Text="Edad" VerticalAlignment="Top" RenderTransformOrigin="-0.843,-1.783" Height="15"/>
         <TextBox x:Name="EdadUsuarioTextBox"  KeyUp="EdadUsuarioTextBox_KeyUp" HorizontalAlignment="Left" Height="23" Margin="69,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
-        <TextBlock x:Name="AyudaNombreTextBlock" HorizontalAlignment="Left" Margin="295,113,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="176"/>
-        <TextBlock x:Name="AyudaApellidoTextBlock" HorizontalAlignment="Left" Margin="295,195,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" RenderTransformOrigin="0.55,-0.196" Width="189"/>
+        <TextBlock x:Name="AyudaNombreTextBlock"  Text="Nombre Cliente" Visibility="Hidden" HorizontalAlignment="Left" Margin="295,113,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="176"/>
+        <TextBlock x:Name="AyudaApellidoTextBlock"  Visibility="Hidden" Text="Apellido Cliente" HorizontalAlignment="Left" Margin="295,195,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" RenderTransformOrigin="0.55,-0.196" Width="189"/>
         <TextBlock x:Name="AyudaEdadTextBox" HorizontalAlignment="Left" Margin="323,297,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
 
 
